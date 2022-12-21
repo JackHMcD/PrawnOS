@@ -30,7 +30,7 @@ KERNEL_LIBRE_PUBKEY := $(KERNEL_SHARED_RESOURCES)/linux-libre-signing-key.gpg
 # Default to a libre kernel. blobby_kernel target will override if needed:
 BLOBBY_BUILD := 1
 KERNEL_BLOBBY_CONFIG := $(KERNEL_RESOURCES)/blobby-config
-KERNEL_BLOBBY_URL := https://cdn.kernel.org/pub/linux/kernel/v5.x/
+KERNEL_BLOBBY_URL := https://cdn.kernel.org/pub/linux/kernel/v6.x/
 KERNEL_BLOBBY_BASENAME := linux-$(KVER).tar.xz
 KERNEL_BLOBBY_TAR := $(PRAWNOS_BUILD_SOURCES)/$(KERNEL_BLOBBY_BASENAME)
 KERNEL_BLOBBY_TAR_SIGNATURE_TARGET_BASENAME := linux-$(KVER).tar
