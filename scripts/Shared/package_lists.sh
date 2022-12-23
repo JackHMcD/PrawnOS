@@ -59,10 +59,12 @@ base_debs_install=(
     net-tools
     netcat-openbsd
     network-manager
+    openssh-server
     parted
     pciutils
     psmisc
     rsync
+    sudo
     traceroute
     udev
     usbutils
