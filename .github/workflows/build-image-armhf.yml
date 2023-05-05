@@ -11,9 +11,8 @@ jobs:
       - name: checkout project
         uses: actions/checkout@v3
       - name: build image
-        with:
-          set-safe-directory: /PrawnOS
         run: sudo dpkg -i ./tests/resources/qemu-user-static_5.1+dfsg-4+b1_amd64.deb && 
+             git config --global --add safe.directory /PrawnOS &&
              docker run --mount type=bind,source=$PWD,target=/PrawnOS
              --privileged -v/dev:/dev debian:bullseye
              /bin/bash /PrawnOS/tests/build-image.sh "$GITHUB_SHA" armhf Shiba
