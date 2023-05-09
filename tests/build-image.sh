@@ -41,9 +41,10 @@ apt install --no-install-recommends --no-install-suggests \
     debootstrap device-tree-compiler devscripts file flex g++ gawk gcc gcc-arm-none-eabi git gpg \
     gpg-agent kmod libc-dev libmpc-dev libncurses-dev libssl-dev lzip make parted patch \
     pbuilder qemu-user-static quilt rsync sudo texinfo u-boot-tools udev vboot-kernel-utils wget
-make install_dependencies_yes TARGET=$TEST_TARGET
-
+    
 git config --global --add safe.directory $(pwd)
+
+make install_dependencies_yes TARGET=$TEST_TARGET
 
 # Note: there's an error for /proc/modules, but at least building the image works fine:
 # libkmod: ERROR ../libkmod/libkmod-module.c:1657 kmod_module_new_from_loaded: could not open /proc/modules: No such file or directory
