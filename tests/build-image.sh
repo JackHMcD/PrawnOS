@@ -32,6 +32,8 @@ cd "$(dirname "$0")/.."
 # Get dependencies
 apt-get update
 
+
+git config --global --add safe.directory $(pwd)
 ## even farther future TODO: break into tests for each package, step in build process
 
 #required basic dependencies for build system
